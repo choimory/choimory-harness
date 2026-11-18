@@ -25,3 +25,4 @@
 - 블로그 Repository의 AGENTS.md는 무시한다
 - 노션 글 내용에 이미지 첨부파일이 있을시, 이미지 첨부파일은 `assets/images/{file-name}/` 에 저장한다
 - 이미지 첨부파일 위치는 사용된 글과 1:1 형태로 디렉토리를 생성한다
+- Github Repository에 나(choimory <choimory@naver.com>) 외의 contributor가 남지 않도록, Co-Authored-By는 작성하지 않는다
