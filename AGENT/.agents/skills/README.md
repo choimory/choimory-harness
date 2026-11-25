@@ -6,10 +6,10 @@
 - 스킬의 기능별 분류는 디렉토리 대신 하단 스킬 목록의 분류 컬럼으로 관리한다.
 - 스킬을 추가하거나 제거할땐 하단 스킬 목록도 함께 수정한다.
 - 외부 스킬은 원본을 수정하지 않고 그대로 가져오며, 출처를 기록한다.
-- Claude Code는 `.claude/skills`의 스킬만 인식하므로, `.claude/skills`가 `.agents/skills`를 가리키는 링크로 걸려있지 않다면 링크를 생성한다.
+- Claude Code는 `.claude/skills`의 스킬만 인식하므로, 프로젝트 루트의 `.claude/skills`가 `.agents/skills`를 가리키는 링크로 걸려있지 않다면 프로젝트 루트에서 링크를 생성한다.
   - Windows: `cmd /c "if not exist .claude mkdir .claude & mklink /J .claude\skills .agents\skills"`
   - Mac/Linux: `mkdir -p .claude && ln -s ../.agents/skills .claude/skills`
-- `.claude/skills`가 링크가 아닌 실제 디렉토리로 이미 존재한다면, 임의로 삭제하거나 옮기지 말고 물어본다.
+- 프로젝트 루트의 `.claude/skills`가 실제 디렉토리로 이미 존재한다면, 기존 스킬들은 건드리지 않고 그 안에 스킬별로 `.claude/skills/{skill-name}` → `.agents/skills/{skill-name}` 링크를 생성한다.
 
 ## 스킬 목록
 
