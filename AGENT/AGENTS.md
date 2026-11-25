@@ -14,6 +14,8 @@
 
 # 개발 히스토리
 
+> 작업 진행에 대한 문서
+>
 > 개발시 반드시 참고한다
 
 @.agents/histories/histories.md
@@ -22,14 +24,28 @@
 
 # 공통 개발 규칙
 
+> 작업 규칙에 대한 문서
+>
 > 개발시 반드시 참고한다
 
 @.agents/rules/*.md
 
 ---
 
+# Skills 목록
+
+> 사용 스킬 목록
+>
+> 스킬 사용시 참고하며, 사용 조건은 각 스킬의 SKILL.md를 따른다
+
+@.agents/skills/README.md
+
+---
+
 # Front-end 개발 규칙 
 
+> 프론트엔드 개발 규칙에 대한 문서
+>
 > 프론트엔드 개발시 반드시 참고한다
 
 .agents/rules/front-end/**/*.md
@@ -38,6 +54,8 @@
 
 # Back-end 개발 규칙
 
+> 백엔드 개발 규칙에 대한 문서
+>
 > 백엔드 개발시 반드시 참고한다
 
 .agents/rules/back-end/**/*.md
@@ -46,6 +64,8 @@
 
 # Dev-ops 개발 규칙
 
+> 인프라 개발 규칙에 대한 문서
+>
 > 인프라 개발시 반드시 참고한다
 
 .agents/rules/dev-ops/**/*.md
