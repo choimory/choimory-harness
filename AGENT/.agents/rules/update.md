@@ -3,7 +3,6 @@
 - AGENTS.md와 .agents 내의 규칙 문서들을 최신버전으로 업데이트 해야할때는 `https://github.com/choimory/choimory-harness`의 문서들을 기준으로 업데이트 한다
 - "규칙|지침|하네스 업데이트 해줘"와 같은 지시가 있을시 업데이트를 진행한다
 - `harness-update` 스킬(.agents/skills/harness-update/SKILL.md)이 있다면 해당 스킬의 절차를 따른다. 스킬이 없거나 사용할 수 없는 환경이라면 이 문서의 규칙대로 직접 진행한다
-- 업데이트를 적용하기 전에 추가/변경/삭제될 파일 목록을 먼저 보여주고 허락을 받는다
 
 ## 대상
 
