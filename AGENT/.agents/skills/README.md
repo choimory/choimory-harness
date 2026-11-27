@@ -6,6 +6,8 @@
 - [스킬별 사용법](#스킬별-사용법)
   - [hallmark](#hallmark)
   - [harness-update](#harness-update)
+  - [frontend-design](#frontend-design)
+  - [design-taste-frontend](#design-taste-frontend)
 
 ---
 
@@ -26,6 +28,18 @@
 |---|---|---|---|---|
 | hallmark | front/design | AI가 만든 것처럼 보이지 않는 웹 UI 디자인. 새 페이지 생성, redesign, audit | `.agents/skills/hallmark/SKILL.md` | [nutlope/hallmark](https://github.com/nutlope/hallmark) (MIT) |
 | harness-update | common/harness | choimory-harness 기준으로 AGENTS.md, .agents 규칙/스킬 최신화. 변경 목록 확인 → 허락 → 적용 → 임시파일 정리 | `.agents/skills/harness-update/SKILL.md` | 자체 제작 |
+| frontend-design | front/design | 새 UI와 기존 UI에 제품·사용자 맥락에 맞는 시각 방향, 타이포그래피, 레이아웃을 설계하고 구현 | `.agents/skills/frontend-design/SKILL.md` | [anthropics/skills](https://github.com/anthropics/skills) (Apache-2.0) |
+| design-taste-frontend | front/design | 회사·제품·랜딩 페이지 제작과 리디자인. 업종별 레이아웃, 실제 사진·제품 UI, 브라우저 검증 | `.agents/skills/design-taste-frontend/SKILL.md` | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) (MIT) |
+
+### 디자인 스킬 선택 기준
+
+새 UI 제작에는 hallmark, frontend-design, design-taste-frontend의 자동 호출 조건이 겹친다. 원하는 스킬이 있으면 이름으로 직접 호출한다.
+
+| 상황 | 스킬 |
+|---|---|
+| 새 페이지, 테마 기반, 디자인 시스템 고정 | hallmark |
+| 새 UI·기존 UI의 시각 방향 설계 (범용) | frontend-design |
+| 회사·제품·랜딩 페이지를 사진·에셋과 브라우저 검증까지 | design-taste-frontend |
 
 ## 스킬별 사용법
 
@@ -66,3 +80,24 @@ node .agents/skills/harness-update/scripts/harness-update.mjs apply --source <so
 # 적용하지 않고 중단할 때 임시 디렉토리 삭제
 node .agents/skills/harness-update/scripts/harness-update.mjs cleanup --source <source>
 ```
+
+### frontend-design
+
+| 명령어 | 설명 |
+|---|---|
+| `/frontend-design <만들 UI 설명>` | 제품과 사용자 맥락을 바탕으로 색상, 타이포그래피, 레이아웃을 계획하고 검토한 뒤 구현 (ex. `/frontend-design 독립 서점의 신간 소개 페이지`) |
+| `/frontend-design <기존 UI 경로와 변경 목표>` | 기존 UI의 시각 방향을 변경 목표에 맞게 다시 설계하고 구현 |
+
+- 제품이나 주제가 명확하지 않으면 대상 사용자와 화면의 주된 목적을 포함한 방향을 제안하고 확인한 뒤 설계한다.
+
+### design-taste-frontend
+
+| 명령어 | 설명 |
+|---|---|
+| `/design-taste-frontend <만들 사이트 설명>` | 업종과 주요 행동을 정하고, 페이지 구성·카피·사진 또는 제품 UI를 설계해 사이트를 구현 |
+| `/design-taste-frontend <기존 페이지 경로> 리디자인해줘` | 기존 프로젝트의 기술 스택에서 페이지를 재설계 |
+| `/design-taste-frontend <기존 페이지 경로> 디자인 검토해줘` | 기존 페이지의 카피, 시각 자료, 레이아웃, 반응형 동작을 점검 |
+
+- 검증 도구에 Node.js 22 이상과 Chrome/Edge/Chromium이 필요하다. ffmpeg는 선택 사항.
+- 제작 시 1440·1024·768·390px 너비를 브라우저로 확인하고, `scripts/gate.mjs`로 완료 조건을 검사한다.
+- 사진·아이콘 등 에셋을 포함해 용량이 크다 (약 39MB).
