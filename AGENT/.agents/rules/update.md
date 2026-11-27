@@ -2,6 +2,8 @@
 
 - AGENTS.md와 .agents 내의 규칙 문서들을 최신버전으로 업데이트 해야할때는 `https://github.com/choimory/choimory-harness`의 문서들을 기준으로 업데이트 한다
 - "규칙|지침|하네스 업데이트 해줘"와 같은 지시가 있을시 업데이트를 진행한다
+- 스킬은 문서만(AGENT/.agents/skills/README.md) 업데이트 하고, 상세 스킬들은(AGENT/.agents/skills/**/*) 기본적으로 업데이트 하지 않는다.
+- 상세 스킬들은 특정한 요청이 있을때에만 추가/업데이트한다 (ex. {스킬명} 추가 해줘, 디자인 관련 스킬만 업데이트 해줘 등)
 - 업데이트를 진행할땐 git clone이나 github 다운로드로 최신 내용을 프로젝트 외부 임시 디렉토리에 다운받아, 해당 파일로 업데이트 후 clone이나 다운로드했던 남은 파일을 제거하는 방식으로 진행한다
 - 작업 중인 프로젝트에 없는 신규 문서가 있을시엔 추가하고, 내용이 다를시엔 변경하고, 제거된 문서가 있을땐 제거한다
 - 경로: `https://github.com/choimory/choimory-harness`/`AGENT` 내의 모든 문서들
