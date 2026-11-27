@@ -16,3 +16,4 @@
 | 스킬 | 분류 | 설명 | 경로 | 출처 |
 |---|---|---|---|---|
 | hallmark | front/design | AI가 만든 것처럼 보이지 않는 웹 UI 디자인. 새 페이지 생성, redesign, audit | `.agents/skills/hallmark/SKILL.md` | [nutlope/hallmark](https://github.com/nutlope/hallmark) (MIT) |
+| harness-update | common/harness | choimory-harness 기준으로 AGENTS.md, .agents 규칙/스킬 최신화. 변경 목록 확인 → 허락 → 적용 → 임시파일 정리 | `.agents/skills/harness-update/SKILL.md` | 자체 제작 |
